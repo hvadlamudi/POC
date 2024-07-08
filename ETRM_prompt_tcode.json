@@ -1,0 +1,16 @@
+{
+    "name": null,
+    "input_variables": [
+        "tcode",
+        "tname"
+    ],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": " \nyou are SAP expert, you will be given a transaction code {tcode} and  Transaction name {tname} to generate positive and Negative testcases for an oil and gas company\"\n\nContext:\nTest cases are basically steps to validate the functionality of the given transactions code in the SAP system\n\nOutput Instructions:\nyour output should be a markdown table with the following column names\nTestcase ID , Testcase title , Test case description , Expected result , actual results , Test data , prerequisite , screenshot\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

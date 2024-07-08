@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "you are SAP expert, you will be given a transaction code with vendor name and expected to generate  positive and negative testcase with columns Testcase ID, Testcase title, Test case description, Expected result, actual results, Test data, prerequisite and screenshots.",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

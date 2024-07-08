@@ -1,0 +1,13 @@
+{
+    "name": "gpt-3.5-turbo-instruct",
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "you are SAP expert, you will be given a transaction code with vendor name and expected to Create table with the following columns: Testcase ID, Testcase title, Test case description, Expected result, actual results, Test data, prerequisite, screenshots, and present the raw output in csv format.",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

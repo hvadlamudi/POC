@@ -1,0 +1,11 @@
+//
+//Prompt1 - "Generate test case for SAP system Purchase order with Testcase id, test case title, test case description, expected  and actual results, test data, prerequisite in excel format"
+//
+//Prompt2 - "as an SAP expert, generate positive and negative testcase with Testcase ID, Testcase title, Test case description, Expected result, actual results, Test data and prerequisite in excel format."
+//
+//
+//Prompt3 - "as an SAP expert, generate positive and negative testcase with Testcase ID, Testcase title, Test case description, Expected result, actual results, Test data and prerequisite in excel format with screenshots."
+//
+//Prompt4 - as an SAP expert, generate  positive testcases for creating a trade  in SAP CTRM with Testcase ID, Testcase title, Test case description, Expected result, actual results, Test data and prerequisite in excel format to download.
+//
+//Prompt5 - as an SAP expert, generate positive testcases for Ticketing Nomination Item with Testcase ID, Testcase title, Test case description, Expected result, actual results, Test data and prerequisite in excel format to download.

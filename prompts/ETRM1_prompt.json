@@ -1,0 +1,13 @@
+{
+    "name": null,
+    "input_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "as an SAP expert, generate  Purchase order positive and negative testcase with Testcase ID, Testcase title, Test case description, Expected result, actual results, Test data and prerequisite in excel format.",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
