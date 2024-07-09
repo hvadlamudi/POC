@@ -1,12 +1,12 @@
 {
     "name": null,
-    "input_variables": [],
+    "input_variables": ["input", "history"],
     "input_types": {},
     "output_parser": null,
     "partial_variables": {},
     "metadata": null,
     "tags": null,
-    "template": " \nyou are SAP expert, generate positive and Negative testcases CREATE DEALS – STEP BY STEP IN FIORI SAP CTRM module for an oil and gas company\"\n\nContext:\nTest cases are basically detailed steps to validate the functionality of the given transactions code in the SAP system\n\nOutput Instructions:\nyour output should be a markdown table with the following column names\nTestcase ID, Test case description, Expected result, actual results, Test data, prerequisite, screenshot\n",
+    "template": "you are SAP expert, generate positive and Negative testcases CREATE DEALS – STEP BY STEP IN FIORI SAP CTRM module for an oil and gas company\"\n\nContext:\nTest cases are basically detailed steps to validate the functionality of the given transactions code in the SAP system\n\nOutput Instructions:\nyour output should be a markdown table with the following column names\nTestcase ID, Test case description, Expected result, actual results, Test data, prerequisite, screenshot\nRelevant Information:\n\n{history}\n\nConversation:\nHuman: {input}\nAI:",
     "template_format": "f-string",
     "validate_template": false,
     "_type": "prompt"

@@ -2,6 +2,8 @@ import ast
 import logging
 from io import StringIO
 import streamlit as st
+
+import prompts.prompts
 from sap.module.ui_components.sidebar import *
 from streamlit_dynamic_filters import DynamicFilters
 from saptest import *
@@ -31,9 +33,9 @@ if st.session_state.sidebar_submit_flag:
 
     elif tname is not None:
         st.write("LLM generating test cases for ... " + tname)
-        response = generate_test_prompt_vasu(Transaction_code=tcode, Transaction_Name=tname,
-                                        format_prompt=loaded_prompt.format(Transaction_code=tcode, Transaction_Name=tname))
+        # response = generate_test_prompt_vasu(Transaction_code=tcode, Transaction_Name=tname, format_prompt=loaded_prompt.format(Transaction_code=tcode, Transaction_Name=tname))
         st.subheader("Test cases for : " + tname)
+        response = generate_test_prompt_hari(format_prompt=prompts.prompts.prompt)
 
     else:
         response = "Choose the module, Transaction code, Name and click on Generate button"
@@ -43,7 +45,7 @@ if st.session_state.sidebar_submit_flag:
 #  add response to Messages as dict items for rendering in the upcomming code.
 user_msg_id=f"user_{get_uuid()}"
 print(f"User id: {user_msg_id}")
-st.session_state.messages[st.session_state.session_id][user_msg_id] = {"role": "user", "content": loaded_prompt.format(Transaction_code=tcode, Transaction_Name=tname)}
+st.session_state.messages[st.session_state.session_id][user_msg_id] = {"role": "user", "content": loaded_prompt}
 assistant_msg_id = f"assistant_{get_uuid()}"
 st.session_state.messages[st.session_state.session_id][assistant_msg_id] = {"role": "assistant", "content": response}
 
@@ -75,8 +77,6 @@ user_input = st.chat_input('Tweak above generated test cases')
 # if "messages" not in st.session_state:
 #     st.session_state.messages = []
 if user_input is not None:
-    response = generate_test_prompt_vasu(Transaction_code=tcode, Transaction_Name=tname,
-                                         format_prompt=loaded_prompt.format(Transaction_code=tcode,
-                                                                            Transaction_Name=tname), question=user_input, session_id=st.session_state.session_id)
-    render_conservation(st.session_state.session_id)
+    response = generate_test_prompt_hari(format_prompt=prompts.prompts.prompt, question=user_input, session_id=st.session_state.session_id)
+    # render_conservation(st.session_state.session_id)
     st.write(response)

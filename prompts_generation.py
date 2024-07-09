@@ -5,7 +5,6 @@ from langchain.prompts import PromptTemplate
 from langchain.prompts import load_prompt
 import pandas as pd
 
-os.environ["OPENAI_API_KEY"] = "sk-proj-Hqspghoh2kse2TwIM8PxT3BlbkFJdiS3VpfEszU1wr96JJou"
 llm = OpenAI(temperature=0.9, max_tokens=4000, model="gpt-3.5-turbo-instruct")
 # text = "as an SAP expert, genearte  positive and negative testcase with Testcase ID, Testcase title, Test case description, Expected result, actual results, Test data and prerequisite in excel format."
 # print(llm(text))
